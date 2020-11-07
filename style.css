@@ -3,9 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: PoppinsBold;
+  src: url(/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: OSReg;
+  src: url(/Open_Sans/OpenSans-Regular.ttf);
+}
 body {
   text-align: center;
 }
+p,small { 
+  font-size: 1.4rem;
+  font-family: OSReg;
+}
+h1,h2,h3,h4,h5,h6 {font-family: PoppinsBold;}
 header {
   padding: 10px 20px;
   display: flex;
@@ -17,9 +30,10 @@ header .logo {
 }
 header .logo img { height: 100%;}
 header p {
+  font-size: 1.1rem;
   padding: 5px 25px;
   border: 3px solid hsl(322, 100%, 66%);
-  border-radius: 15px;
+  border-radius: 25px;
   color: hsl(322, 100%, 66%);
 }
 .showcase {
@@ -29,21 +43,23 @@ header p {
 
 .showcase-heading {
   padding-bottom: 30px;
+  font-size: 2rem;
 }
 .showcase p {
   padding-bottom: 40px;
   font-size: 1.2rem;
 }
-.showcase a {
+ a {
   text-decoration: none;
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 1.2rem;
   padding: 13px 60px;
   border-radius: 25px;
   background: hsl(322, 100%, 66%);
   color: #ffffff;
   box-shadow:  0 3px 0  0 rgba(0, 0, 0, 0.2);
+  font-family: OSReg;
 }
 .showcase-image {
   width: 100%;
@@ -57,38 +73,127 @@ header p {
 .metric {
   padding: 50px 0 0 50px;
   /* border: 1px solid red; */
-  
 }
 .metric img {
   height: 20px;
   margin-right: 100px;
   }
 .metric h2 { font-size: 3rem;}
-.section-c {
+.section {
+  padding: 30px 30px 100px 30px;
+}
+.section-c,
+.section-e {
   background: hsl(207, 100%, 98%);
   position: relative;
-  padding: 200px 0;
+  padding: 150px 30px;
   margin: 30px 0;
 }
-.section-c::before{
+
+.section-c::before,
+.section-e::before{
   content: "";
   position: absolute;
-  height: 150px;
+  height: 100px;
   width: 100%;
   left: 0;
-  top: -30px;
+  top: -20px;
   background: url(/images/bg-section-top-mobile-1.svg) no-repeat top left/cover,#ffffff;
-  
 }
-.section-c-image {
+.section-c::after,
+.section-e::after{
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: url(/images/bg-section-bottom-mobile-1.svg) no-repeat top left/cover,#ffffff;
+}
+.section-image {
   width: 100%;
   /* border: 1px solid red; */
 }
-.section-c-image img {
-  width: 60%;
+.section-image img {
+  width: 90%;
   margin: 0 auto;
 }
-.section-c-message h2 {
+.section-message h2 {
   font-size: 1.8rem;
+  padding: 50px 0 20px 0;
+}
+.section-e{
+  padding: 300px 30px;
+  
+}
+.section-e::before {
+  background: url(/images/bg-section-top-mobile-2.svg) no-repeat top left/cover,#ffffff;
+}
+.section-e::after {
+  background: url(/images/bg-section-bottom-mobile-2.svg) no-repeat top left/cover,#ffffff;
+  height: 200px;
+}
+.section-f h2 {
+  font-size: 2.5rem;
+  padding: 30px 0;
+}
+
+footer {
+  padding: 50px 30px;
+  background: hsl(192, 100%, 9%);
+  text-align: left;
+  color: #ffffff;
+  position: relative;
+  margin-top: 100px;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  height:80px;
+  width: 100%;
+  left: 0;
+  top: -50px;
+  background: url(/images/bg-footer-top-mobile.svg) no-repeat top left/cover;
+}
+
+.footer-a h2, .footer-a p {
+  padding: 20px 0;
+}
+.footer-a p,
+.footer-b p {font-size: 1.2rem;}
+.subscribe {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+button {
+  padding: 10px 30px;
+  background: hsl(322, 100%, 66%);
+  color: #ffffff;
+  font-family: OSReg;
+  font-size: 1rem;
+  border-radius: 5px;
+  float: right;
+}
+.footer-b {
+  margin-top: 100px;
+}
+.footer-b .footer-image img {
+  color: #ffffff;
+  }
+
+.footer-b p { padding: 30px 0;}
+.phone, .email {
+  font-size: 1.5rem;
   padding: 10px 0;
+}
+.phone img, .email img {padding-right: 10px;}
+.social-icons {
+  font-size: 2rem;
+  margin-top: 60px;
+  display: flex;
+  gap: 30px;
 }

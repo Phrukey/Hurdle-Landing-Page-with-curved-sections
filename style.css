@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+}
+header {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  height: 20px;
+}
+header .logo img { height: 100%;}
+header p {
+  padding: 5px 25px;
+  border: 3px solid hsl(322, 100%, 66%);
+  border-radius: 15px;
+  color: hsl(322, 100%, 66%);
+}
+.showcase {
+  padding: 10px 20px;
+  margin: 60px 0 80px 0;
+} 
+
+.showcase-heading {
+  padding-bottom: 30px;
+}
+.showcase p {
+  padding-bottom: 40px;
+  font-size: 1.2rem;
+}
+.showcase a {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  padding: 13px 60px;
+  border-radius: 25px;
+  background: hsl(322, 100%, 66%);
+  color: #ffffff;
+  box-shadow:  0 3px 0  0 rgba(0, 0, 0, 0.2);
+}
+.showcase-image {
+  width: 100%;
+  margin: 30px 10px;
+}
+.showcase-image img {
+  width: 100%;
+  /* display: inline-block; */
+  margin-top: 25px;
+}
+.metric {
+  padding: 50px 0 0 50px;
+  /* border: 1px solid red; */
+  
+}
+.metric img {
+  height: 20px;
+  margin-right: 100px;
+  }
+.metric h2 { font-size: 3rem;}
+.section-c {
+  background: hsl(207, 100%, 98%);
+  position: relative;
+  padding: 200px 0;
+  margin: 30px 0;
+}
+.section-c::before{
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  left: 0;
+  top: -30px;
+  background: url(/images/bg-section-top-mobile-1.svg) no-repeat top left/cover,#ffffff;
+  
+}
+.section-c-image {
+  width: 100%;
+  /* border: 1px solid red; */
+}
+.section-c-image img {
+  width: 60%;
+  margin: 0 auto;
+}
+.section-c-message h2 {
+  font-size: 1.8rem;
+  padding: 10px 0;
+}

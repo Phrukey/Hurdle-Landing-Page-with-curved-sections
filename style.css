@@ -39,7 +39,7 @@ header p {
 }
 .showcase {
   padding: 10px 20px;
-  margin: 60px 0 80px 0;
+  margin: 60px 0 50px 0;
 } 
 
 .showcase-heading {
@@ -86,6 +86,18 @@ header p {
 .section {
   padding: 30px 30px 100px 30px;
 }
+.section-image {
+  width: 100%;
+  /* border: 1px solid red; */
+}
+.section-image img {
+  width: 90%;
+  margin: 0 auto;
+}
+.section-message h2 {
+  font-size: 1.8rem;
+  padding: 50px 0 20px 0;
+}
 .section-c,
 .section-e {
   background: hsl(207, 100%, 98%);
@@ -114,18 +126,7 @@ header p {
   bottom: 0;
   background: url(/images/bg-section-bottom-mobile-1.svg) no-repeat top left/cover,#ffffff;
 }
-.section-image {
-  width: 100%;
-  /* border: 1px solid red; */
-}
-.section-image img {
-  width: 90%;
-  margin: 0 auto;
-}
-.section-message h2 {
-  font-size: 1.8rem;
-  padding: 50px 0 20px 0;
-}
+
 .section-e{
   padding: 300px 30px;
 }
@@ -167,7 +168,7 @@ footer::before {
 .footer-b p {font-size: 1.2rem;}
 .subscribe {
   width: 100%;
-  padding: 10px;
+  padding: 14px;
   outline: none;
   border: none;
   border-radius: 5px;
@@ -211,15 +212,20 @@ button {
     margin: 0 auto;
   }
   .showcase-image img {width: 75%;}
-  .section-c,.section-e,.section-d,  footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  .metrics {
+    display: flex;
     align-items: center;
-    justify-content: center;
+    padding: 50px 100px;
+    justify-content: space-around;
     gap: 30px;
-    padding-left: 70px;
-    padding-right: 70px;
   }
+  .section-image {
+    width: 100%;
+  }
+  .section {
+    text-align: left;
+  }
+  
   .section-message p {
     width: 90%;
   }
@@ -228,19 +234,22 @@ button {
     grid-row: 1/2;
   }
   .section-image {grid-column: 2/3}
-  
-  .metrics {
-    display: flex;
+  .section-image img {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .section-message h2 {
+    font-size: 2.5rem;
+    padding: 50px 0 20px o ;
+  }
+  .section-c,.section-e,  footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
     gap: 30px;
-  }
-  .metrics {
-    padding: 50px 100px;
-    justify-content: space-around;
-  }
-  .section-d {
-    padding: 100px 70px;
+    padding-left: 70px;
+    padding-right: 70px;
   }
   
   .section-c::before {
@@ -251,6 +260,16 @@ button {
     background: url(/images/bg-section-bottom-desktop-1.svg) no-repeat top left/cover, #ffffff;
     height:  max(120px, 10vw);
   }
+  .section-d {
+    padding: 100px 70px;
+    display: flex;
+    column-gap: 50px;
+  }
+  .section-d.section-image {
+    flex: 1.5;
+  }
+  .section-d.section-message {flex:1}
+  
   .section-e{ padding: 150px 100px;}
   .section-e::before {
     background: url(/images/bg-section-top-desktop-2.svg)  no-repeat top left/cover, #ffffff;
@@ -260,22 +279,9 @@ button {
     background: url(/images/bg-section-bottom-desktop-2.svg) no-repeat top left/cover, #ffffff;
     height: 140px;
   }
-  .section-image {
-    width: 100%;
-  }
-  .section {
-    text-align: left;
-  }
   .section-f {
     text-align: center;
   }
-  .section-image img {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .section-message h2 {
-    font-size: 2.5rem;
-    padding: 50px 0 20px o ;
   }
   footer {
     padding-top: 150px;

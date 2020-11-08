@@ -14,12 +14,14 @@
 body {
   text-align: center;  
 }
-p,small { 
+.text { 
   font-family: OSReg;
+  font-size: 1.5rem;
 }
 h1,h2,h3,h4,h5,h6 {font-family: PoppinsBold;}
 header {
-  padding: 30px 20px;
+  width: 90%;
+  margin: 20px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,7 +48,8 @@ header p {
 }
 .showcase p {
   padding-bottom: 40px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  font-family: OSReg;
 }
  a {
   text-decoration: none;
@@ -69,6 +72,7 @@ header p {
   /* display: inline-block; */
   margin-top: 25px;
 }
+.metrics{margin: 40px 0;}
 .metric {
   padding: 50px 0 0 50px;
   
@@ -78,7 +82,7 @@ header p {
   margin-right: 100px;
   }
 .metric h2 { font-size: 4rem;}
-.metric p {font-size: 1.2rem;}
+/* .metric p {font-size: 1.2rem;} */
 .section {
   padding: 30px 30px 100px 30px;
 }
@@ -187,7 +191,6 @@ button {
 
 .footer-b p { padding: 30px 0;}
 .phone, .email {
-  font-size: 1.5rem;
   padding: 10px 0;
 }
 .phone img, .email img {padding-right: 10px;}
@@ -199,30 +202,34 @@ button {
 }
 @media screen and (min-width:850px) {
   .showcase-heading {
-    font-size: 2.7rem;
-  }
-  .showcase p {
-    width: 70%;
+    font-size: 3rem;
+    max-width: 75%;
     margin: 0 auto;
   }
-  .showcase-image img {width: 80%;}
-  .section-c,.section-e,  footer {
-    /* display: grid;
+  .showcase p {
+    width: max(600px, 50%);
+    margin: 0 auto;
+  }
+  .showcase-image img {width: 75%;}
+  .section-c,.section-e,.section-d,  footer {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px; */
-    display: flex;
-    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     gap: 30px;
-    padding-left: 150px;
-    padding-right: 100px;
+    padding-left: 70px;
+    padding-right: 70px;
   }
   .section-message p {
-    width: 80%;
-    font-size: 1.5rem;
+    width: 90%;
   }
-  .section-d, .metrics {
+  .section-message {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .section-image {grid-column: 2/3}
+  
+  .metrics {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -231,19 +238,18 @@ button {
   .metrics {
     padding: 50px 100px;
     justify-content: space-around;
-    /* border: 1px solid red; */
   }
   .section-d {
-    padding: 100px 100px;
+    padding: 100px 70px;
   }
-  }
+  
   .section-c::before {
     background: url(/images/bg-section-top-desktop-1.svg) no-repeat top left/cover, #ffffff;
-    height: 120px;
+    height:  max(120px, 10vw);
   }
   .section-c::after {
     background: url(/images/bg-section-bottom-desktop-1.svg) no-repeat top left/cover, #ffffff;
-    height: 80px;
+    height:  max(120px, 10vw);
   }
   .section-e{ padding: 150px 100px;}
   .section-e::before {
@@ -256,7 +262,6 @@ button {
   }
   .section-image {
     width: 100%;
-    /* border: 1px solid red; */
   }
   .section {
     text-align: left;
@@ -278,13 +283,16 @@ button {
   }
   footer::before {
     background: url(/images/bg-footer-top-desktop.svg) no-repeat top left/cover, #ffffff;
-    height: 120px;
+    height: max(120px, 10vw);
     top: 0;
     border: none;
   }
   .footer-a {
-    max-width: 50%;
-    padding: 0 20px 0 20px;
+    grid-column: 2/3;
+  }
+  .footer-b{
+    grid-column: 1/2;
+    grid-row: 1/2;
   }
   .footer-a form {
     display: flex;
